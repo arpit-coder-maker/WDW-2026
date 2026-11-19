@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Project: Accessible Student Admission Page</title>
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background-color: #f4f4f4;
+      color: #111;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .page-container {
+      max-width: 750px;
+      margin: 0 auto;
+      background-color: #efefef;
+      border: 1px solid #ccc;
+    }
+
+    header {
+      background-color: #0b2d82;
+      color: #ffffff;
+      text-align: center;
+      padding: 24px 16px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    main {
+      padding: 24px 70px;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 24px;
+    }
+
+    caption {
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    th, td {
+      border: 1px solid #888;
+      padding: 6px 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #dce2f2;
+      text-align: center;
+    }
+
+    fieldset {
+      border: 1px solid #999;
+      padding: 16px;
+    }
+
+    legend {
+      padding: 0 6px;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 240px;
+      padding: 4px;
+      border: 1px solid #777;
+    }
+
+    select {
+      padding: 3px 6px;
+      border: 1px solid #777;
+    }
+
+    textarea {
+      width: 440px;
+      max-width: 100%;
+      height: 55px;
+      padding: 4px;
+      border: 1px solid #777;
+    }
+
+    button {
+      padding: 5px 12px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #0b2d82;
+      color: #ffffff;
+      text-align: center;
+      padding: 8px;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-container">
+    <header>
+      <h1>ABC College Admission 2026</h1>
+    </header>
+
+    <main>
+      <section aria-labelledby="courses-heading">
+        <h2 id="courses-heading">Courses and Fees</h2>
+        <table>
+          <caption>Available Courses</caption>
+          <thead>
+            <tr>
+              <th scope="col">Course</th>
+              <th scope="col">Seats</th>
+              <th scope="col">Fees</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>B.Tech CSE</td>
+              <td>120</td>
+              <td>&#8377;90,000</td>
+            </tr>
+            <tr>
+              <td>BCA</td>
+              <td>60</td>
+              <td>&#8377;45,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-label="Student Application">
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Application Form</legend>
+
+            <div class="form-group">
+              <label for="student-name">Name:</label>
+              <input type="text" id="student-name" name="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="student-email">Email:</label>
+              <input type="email" id="student-email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="course-select">Course:</label>
+              <select id="course-select" name="course" required>
+                <option value="B.Tech CSE">B.Tech CSE</option>
+                <option value="BCA">BCA</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="statement">Statement:</label>
+              <textarea id="statement" name="statement" required></textarea>
+            </div>
+
+            <button type="submit">Apply</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2026 ABC College
+    </footer>
+  </div>
+
+</body>
+</html>

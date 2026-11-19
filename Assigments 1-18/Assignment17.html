@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Attributes and Input Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        input {
+            padding: 4px;
+            font-size: 14px;
+        }
+        input[type="number"] {
+            width: 85px;
+        }
+        button {
+            padding: 4px 10px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <input type="text" placeholder="Full name" required>
+        
+        <input type="email" placeholder="you@college.edu" required>
+        
+        <input type="tel" placeholder="10-digit mobile" pattern="[0-9]{10}" maxlength="10" required>
+        
+        <input type="password" placeholder="Min 6 characters" minlength="6" required>
+        
+        <input type="number" placeholder="Age (17+" min="17" max="100" required>
+        
+        <button type="submit">Register</button>
+    </form>
+
+</body>
+</html>
